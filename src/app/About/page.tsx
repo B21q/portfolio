@@ -12,14 +12,14 @@ import { BsGit } from "react-icons/bs"
 
 function About() {
     return (
-        <section>
+        <section className='h-max'>
             <Navbar/>
-            <div className="h-max mx-4 md:mx-8 lg:mx-40 xl:mx-40 py-16 font-manrope">
+            <div className=" mx-4 md:mx-8 lg:mx-40 xl:mx-40 py-16 font-manrope">
                 <div className="flex flex-col">
-                <p className="text-2xl  text-bg dark:text-gray-50 font-bold drop-shadow-sm">About-me</p>
-                <h1 className="text-bg-alt dark:text-gray-300 text-lg pt-4 drop-shadow-sm">I am an Information Systems student who has been passionate about programming since I started exploring the world of Linux. I have front-end experience using mainly React with TypeScript and I'm currently learning Rust to expand my knowledge in low-level programming.</h1>
+                <p className="text-2xl text-bg dark:text-gray-50 font-bold drop-shadow-sm">About-me</p>
+                <h1 className="font-open text-bg-alt dark:text-gray-300 text-lg pt-4 drop-shadow-sm">I am an Information Systems student who has been passionate about programming since I started exploring the world of Linux. I have front-end experience using mainly React with TypeScript and I'm currently learning Rust to expand my knowledge in low-level programming.</h1>
                 <p className="text-2xl font-bold pt-8 dark:text-gray-200 drop-shadow-sm">Tools</p>
-                <h1 className="text-bg-alt dark:text-gray-300 text-lg py-4 drop-shadow-sm">I develop projects using a variety of tools and technologies. Some of the resources I often use include:</h1>
+                <h1 className="text-bg-alt dark:text-gray-300 text-lg py-4 drop-shadow-sm font-open">I develop projects using a variety of tools and technologies. Some of the resources I often use include:</h1>
             </div>
             <div translate="no" className="grid gap-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
              <span className="text-2xl flex gap-2 justify-center items-center shadow-md text-bg bg-black/5 dark:text-gray-50 border dark:bg-bg-alt dark:border-igray-10 p-2 rounded-sm">
@@ -81,12 +81,8 @@ function About() {
                 <FaGithub/>
                 <h1 className="text-bg dark:text-gray-50 text-lg drop-shadow-sm">Github</h1>
               </span>
-
-
-
             </div>
           </div>
-
           <Footer/>
         </section>
     )

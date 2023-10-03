@@ -7,5 +7,4 @@ function Footer() {
 		</section>
 	);
 }
-
 export default dynamic(() => Promise.resolve(Footer), { ssr: false });
