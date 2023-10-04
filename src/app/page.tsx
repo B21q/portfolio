@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 
 export default function Page() {
   return (
-    <section>
+    <section className='transition-all duration-300 scroll-smooth'>
       <Top/>
       <Navbar/>
       <Home/>

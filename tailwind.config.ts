@@ -11,6 +11,10 @@ const config: Config = {
   theme: {    
     extend: {
 
+      cursor: {
+        'cursor': 'cursor-custom, pointer',
+      },
+
       boxShadow: {
         '3xl': '0px 10px 20px -25px rgba(0, 0, 0, 1.0)',
       },
@@ -39,7 +43,7 @@ const config: Config = {
         'ired': '#C39DAD',
         'iyellow': '#C2C39D',
         'iwhite': '#F7F7FA',
-        'igray': '#161616',
+        'igray': '#BABABA',
         'igray-10': '#333333',
       },
 

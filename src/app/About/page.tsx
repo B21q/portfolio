@@ -1,9 +1,11 @@
+'use client'
+
 import dynamic from 'next/dynamic'
 
 import Navbar from "../About/Navbar"
 import Footer from "../components/Footer"
 
-
+import { motion } from 'framer-motion'
 import { SiTailwindcss, SiNeovim, SiTypescript } from 'react-icons/si'
 import { TbBrandVscode, TbBrandNextjs } from 'react-icons/tb'
 import { FaGithub, FaLinux, FaReact, FaRust, FaSpotify } from 'react-icons/fa'
@@ -13,12 +15,17 @@ import { BsGit } from "react-icons/bs"
 function About() {
     return (
         <section className='h-max'>
+           <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2.2 }}
+      >
             <Navbar/>
-            <div className=" mx-4 md:mx-8 lg:mx-40 xl:mx-40 py-16 font-manrope">
+            <div className=" mx-4 md:mx-8 lg:mx-40 xl:mx-40 py-16 font-sora">
                 <div className="flex flex-col">
                 <p className="text-2xl text-bg dark:text-gray-50 font-bold drop-shadow-sm">About-me</p>
                 <h1 className="font-open text-bg-alt dark:text-gray-300 text-lg pt-4 drop-shadow-sm">I am an Information Systems student who has been passionate about programming since I started exploring the world of Linux. I have front-end experience using mainly React with TypeScript and I'm currently learning Rust to expand my knowledge in low-level programming.</h1>
-                <p className="text-2xl font-bold pt-8 dark:text-gray-200 drop-shadow-sm">Tools</p>
+                <p className="text-2xl font-bold pt-8 dark:text-gray-200 drop-shadow-sm font-sora">Tools</p>
                 <h1 className="text-bg-alt dark:text-gray-300 text-lg py-4 drop-shadow-sm font-open">I develop projects using a variety of tools and technologies. Some of the resources I often use include:</h1>
             </div>
             <div translate="no" className="grid gap-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
@@ -84,6 +91,7 @@ function About() {
             </div>
           </div>
           <Footer/>
+          </motion.div>
         </section>
     )
 }

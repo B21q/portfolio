@@ -48,19 +48,29 @@ function Navbar() {
   return (
     <nav ref={navbarRef} className="sticky z-10 top-0 font-sora bg-iwhite dark:bg-bg md:mx-4 lg:mx-36">
       <div className="flex justify-between items-center dark:text-gray-100 py-4 mx-4 md:mx-4">
-        <span>
-          <a className='text-bg dark:text-white text-xl p-2 rounded-sm flex items-center justify-center' href="#Home">²B¹</a>
-        </span>
+      <motion.span 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2.6 }}
+      className='flex gap-4'>
+          <a className='text-bg dark:text-white text-xl rounded-sm flex items-center justify-center font-medium mt-1' href="/#Home">²B¹</a>
+          <span className='hidden md:flex lg:flex xl:flex'><ThemeToggle/></span>
+        </motion.span>
 
-        <ul className="hidden md:flex md:items-center lg:flex lg:items-center xl:flex xl:items-center gap-4">
+
+        <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2.6 }}
+        className='flex gap-4'
+        >
+        <ul className="hidden md:flex md:items-center lg:flex lg:items-center xl:flex xl:items-center gap-8 font-open font-medium text-lg">
           <li><a className='link link-underline link-underline-black text-bg dark:text-gray-100' href="About">About</a></li>
           <li><a className='link link-underline link-underline-black text-bg dark:text-gray-100' href="#Projects">Projects</a></li>
           <li><a className='link link-underline link-underline-black text-bg dark:text-gray-100' href="#Experiences">Experiences</a></li>
         </ul>
-        
-        <div className='flex tem-center gap-4'>
-          <span className='hidden md:flex lg:flex xl:flex'><ThemeToggle/></span>
-        </div>
+
+      </motion.div>
 
         <div className="md:hidden lg:hidden xl:hidden transition-all duration-700">
           <motion.button

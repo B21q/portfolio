@@ -46,19 +46,28 @@ function Home() {
         transition={{ duration: 2.2 }}
       >
         <h1 className="font-sora font-medium text-lg md:text-lg lg:text-lg xl:text-lg flex items-center dark:text-white">
-          <span className="flex items-center text-red-700 animate-pulse w-4 h-4">
+          <span className="flex items-center text-red-700 animate-pulse w-4 h-4 pb-1 mr-0.5">
             <BiCheckboxSquare />
           </span>
-          <h2 className="flex items-center px-1 ">Latest project</h2>
-          <span className="text-2xl">
+          <div className="flex items-center">Latest project
+          <span className="flex pb-0.5 items-center text-2xl">
             <BsArrowRightShort />
           </span>
+
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            transition={{ duration: 0 }}
+            className="flex gap-3 transition-transform duration-300"
+          >
           <a
-            className="hover:-translate-y-2 transition-all duration-300 underline decoration-iblue-10 px-1"
+            translate='no'
+            className="font-semibold flex items-center transition-all duration-300 underline decoration-iblue-10 px-1 "
             href="Boo"
           >
             Boo
           </a>
+          </motion.div>
+          </div>
         </h1>
       </motion.div>
 

@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { FiSun, FiMoon } from 'react-icons/fi'; // Importe os ícones desejados
 
@@ -25,20 +26,26 @@ const ThemeToggle = () => {
   };
 
   return (
+    <motion.div
+        whileHover={{ scale: 1.25 }}
+        transition={{ duration: 0 }}
+        className="flex items-center gap-3 transition-transform duration-300"
+      >
     <button
       onClick={toggleTheme}
-      className="text-white text-xl hover:-translate-y-2 transition-all duration-300"
+      className="text-white text-xl transition-all duration-1000"
     >
       {isDarkMode ? (
         <>
-          <FiSun className="mr-2 text-gray-200 hover:text-yellow-200" />
+          <FiSun className="text-gray-200 hover:text-yellow-200" />
         </>
       ) : (
         <>
-          <FiMoon className="mr-2 text-bg hover:text-imoon" /> 
+          <FiMoon className="text-bg hover:text-imoon" /> 
         </>
       )}
     </button>
+    </motion.div>
   );
 };
 
