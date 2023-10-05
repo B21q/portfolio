@@ -2,8 +2,6 @@
 
 import dynamic from 'next/dynamic'
 
-import Navbar from "../About/Navbar"
-import Footer from "./Footer"
 
 import { motion } from 'framer-motion'
 import { SiTailwindcss, SiNeovim, SiTypescript } from 'react-icons/si'
