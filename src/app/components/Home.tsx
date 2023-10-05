@@ -10,7 +10,7 @@ import { BiCheckboxSquare } from 'react-icons/bi';
 
 function Home() {
   return (
-    <section className="h-screen flex flex-col justify-center -my-16 mx-4 md:mx-8 lg:mx-40 xl:mx-40 md:mb-8 lg:mb-8">
+    <section className="z-0 h-screen -mt-6 -mb-28 md:h-screen lg:h-screen xl:h-screen flex flex-col justify-center mx-4 md:mx-8 lg:mx-40 xl:mx-40 md:mb-8 lg:-mt-2 lg:mb-8">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

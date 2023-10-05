@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic'
 
 import Navbar from "../About/Navbar"
-import Footer from "../components/Footer"
+import Footer from "./Footer"
 
 import { motion } from 'framer-motion'
 import { SiTailwindcss, SiNeovim, SiTypescript } from 'react-icons/si'
@@ -14,14 +14,13 @@ import { BsGit } from "react-icons/bs"
 
 function About() {
     return (
-        <section className='h-max'>
+        <section className='h-max flex justify-center lg:h-screen mb-32'>
            <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2.2 }}
       >
-            <Navbar/>
-            <div className=" mx-4 md:mx-8 lg:mx-40 xl:mx-40 py-16 font-sora">
+            <div className="mx-4 md:mx-8 lg:mx-40 xl:mx-40 pt-16 font-sora">
                 <div className="flex flex-col">
                 <p className="text-2xl text-bg dark:text-gray-50 font-bold drop-shadow-sm">About-me</p>
                 <h1 className="font-open text-bg-alt dark:text-gray-300 text-lg pt-4 drop-shadow-sm">I am an Information Systems student who has been passionate about programming since I started exploring the world of Linux. I have front-end experience using mainly React with TypeScript and I'm currently learning Rust to expand my knowledge in low-level programming.</h1>
@@ -90,7 +89,6 @@ function About() {
               </span>
             </div>
           </div>
-          <Footer/>
           </motion.div>
         </section>
     )
